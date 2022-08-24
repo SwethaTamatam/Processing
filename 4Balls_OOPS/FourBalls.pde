@@ -7,6 +7,18 @@ class Ball{
         this.speed = speed;
         this.distFromTop=distFromTop;
     }
+    public int getDiameter() {
+		return diameter;
+	}
+	public int getSpeed() {
+		return speed;
+	}
+	public int getDistFromTop() {
+		return distFromTop;
+	}
+	public int getPosFromLeft() {
+		return posFromLeft;
+	}
 }
 public static final int WIDTH = 640;
 public static final int HEIGHT = 480;
@@ -36,6 +48,6 @@ public void draw (){
 }
 public void drawCircle(Ball b)
 {
-  ellipse(b.posFromLeft,b.distFromTop,b.diameter/2,b.diameter/2);
+  ellipse(b.getPosFromLeft(),b.getDistFromTop(),b.getDiameter()/2,b.getDiameter()/2);
   b.posFromLeft+=b.speed;
 }
